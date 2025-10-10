@@ -1,0 +1,909 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+}
+
+summary {
+  cursor: default;
+}
+
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h2,h3 {
+  font-family: "LINE Seed JP";
+}
+
+
+:root {
+  --mainColor: #005149;
+  --subColor: #A8BD38;
+  --accentColor: #D9DC41;
+  --textColor: #002724;
+  --bgColor: #FEFFFD;
+  --gray: #C5C5C5;
+}
+
+body {
+  font-family: "Noto Sans JP", "serif";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--bgColor);
+}
+
+/* primary-btn */
+.primary-btn {
+  padding: 1rem 2.5rem;
+  background: var(--accentColor);
+  border: none;
+  border-radius: 2rem;
+  font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
+  color: #fff;
+}
+
+.primary-btn a {
+  color: #fff;
+}
+
+
+/* ローディングスタイル */
+.leftCurtainbg {
+  display: block;
+  content: "";
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: var(--mainColor);
+  animation-name:curtainAnime;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes curtainAnime {
+  0% {
+    transform-origin:left;
+    transform:scaleX(0);
+  }
+  50% {
+    transform-origin:left;
+    transform:scaleX(1);
+  }
+  50.001% {
+    transform-origin:right;
+  }
+  100% {
+    transform-origin:right;
+    transform:scaleX(0);
+  }
+}
+
+.fadeout {
+  animation : fadeOut 1s;
+  animation-fill-mode: both;
+  }
+  @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#container{
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにpageOnクラスがついたら出現*/
+body.pageOn #container{
+  animation-name:PageAnimeOn;
+  animation-duration:1s;
+  animation-delay: 0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeOn{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+
+/*------------------------------*/
+/* header */
+/*------------------------------*/
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 7%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  background: #fff;
+}
+
+
+/* header ロゴ */
+.l-header--logo {
+  max-width: 216px;
+  height: auto;
+}
+
+.l-header--logo img {
+  width: 100%;
+}
+
+
+/* g-nav */
+.p-navigation-global__list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-navigation-global__list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "LINE Seed JP";
+  font-weight: bold;
+  font-size: 16px;
+  color: #c5c5c5;
+  transition: .3s;
+}
+
+.p-navigation-global__list li:hover {
+  color: var(--mainColor);
+}
+
+.p-navigation-global__list span {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.p-navigation-global__list li button {
+  display: flex;
+  flex-direction: column;
+  font-family: "LINE Seed JP";
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  color: #C5C5C5;
+  transition: .3s;
+}
+
+.p-navigation-global__list li button:hover {
+  color: var(--mainColor);
+}
+
+
+.p-megaMenu.is-open .p-megaMenu__navigation {
+  -webkit-clip-path: inset(0 -50vw);
+  clip-path: inset(0 -50vw);
+  visibility: visible;
+}
+
+.p-megaMenu.is-open .p-megaMenu__open::after {
+  rotate: 180deg;
+}
+
+.p-megaMenu__open {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.header-btn {
+  padding: 2rem 1rem;
+  background-color: var(--accentColor);
+  color: #fff !important;
+  border-radius: 0 0 0 4px;
+}
+
+
+
+/* メガメニュー inner */
+.p-megaMenu__navigation {
+  -webkit-clip-path: inset(0 -50vw 100%);
+  background-color: #fff;
+  clip-path: inset(0 -50vw 100%);
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  transition: all 0.4s;
+  visibility: hidden;
+  width: 100%;
+}
+
+.p-megaMenu__list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.p-megaMenu__list-visual {
+  display: flex;
+  align-items: center;
+}
+
+.p-megaMenu__list-visual img {
+  width: 50%;
+  border-radius: 4px;
+}
+
+.p-megaMenu__list-tittle {
+  width: 100%;
+  text-align: center;
+}
+
+.p-megaMenu__list-tittle h2 {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.06em;
+  color: #c5c5c5;
+  transition: .3s;
+}
+
+.p-megaMenu__list-visual:hover .p-megaMenu__list-tittle h2 {
+  color: var(--mainColor);
+}
+
+.sp__header {
+  display: none;
+}
+
+/* sp header */ 
+/*-----------------------------*/
+@media (max-width: 1200px) {
+  .pc-header {
+    display: none;
+  }
+
+  .sp__header {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+  }
+
+  .sp__header--container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4%;
+  }
+
+  .sp__header--logo {
+    max-width: 160px;
+  }
+
+  .sp__header--logo img {
+    width: 100%;
+  }
+
+  
+  /* ハンバーガーメニュー */
+  /*-----------------------------*/
+  #header-hamburger {
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    /* ボタンがハンバーガーウィンドウの下に隠れないようにする指定 */
+    position: relative;
+    z-index: 10;
+  }
+
+  #header-hamburger::after {
+    width: 100%;
+    content: "MENU";
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    top: -4px;
+    color: var(--mainColor);
+    letter-spacing: 0.04em;
+    font-family: "LINE Seed JP";
+    font-weight: bold;
+  }
+
+
+  /* 三本線 */
+  #header-hamburger span {
+    display: inline-block;
+    background: var(--mainColor);
+    width: 100%;
+    height: 3px;
+    transition: all .4s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #header-hamburger span:nth-of-type(1) {
+      top: 50%;
+  }
+  
+  #header-hamburger span:nth-of-type(2) {
+      top: 70%;
+  }
+
+  #header-hamburger span:nth-of-type(3) {
+      top: 90%;
+  }
+
+  /* ×印 */
+  /*activeクラスが付与されると線が回転して×になる*/
+  #header-hamburger.active span:nth-of-type(1) {
+    top: 70%;
+    left: 25%;
+    transform: rotate(-45deg);
+    width: 50%;
+  }
+
+  #header-hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #header-hamburger.active span:nth-of-type(3) {
+    top: 70%;
+    left: 25%;
+    transform: rotate(45deg);
+    width: 50%;
+  }
+
+
+  /* メニューウィンドウ */
+  /*-----------------------------*/
+  #hamburger-window {
+    transition: 0.3s;
+    text-align: center;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    z-index: 1;
+    width: 40vw;
+    height: 100vh;
+    /* 画面からはみ出したらスクロール可能にする */
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: #fff;
+    padding-top: 15vh;
+    box-shadow: -4px 4px 11px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  /*スクロールバー非表示（Chrome・Safari）*/
+  .content::-webkit-scrollbar{
+    display:none;
+  }
+
+  #hamburger-window.open {
+    visibility: visible;
+    right: 0;
+  }
+
+  .hamburger-window__nav-list {
+    padding-inline: clamp(1rem, 0.571rem + 1.9vw, 2rem);
+}
+
+  .hamburger-window__link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hamburger-window__link a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: clamp(0.875rem, 0.821rem + 0.24vw, 1rem);
+    font-family: "LINE Seed JP";
+    font-weight: bold;
+    color: var(--mainColor);
+  }
+
+  .hamburger-window__link a span {
+    font-weight: normal;
+    color: #c5c5c5;
+  }
+
+  .hamburger-window__link:first-child .acordion-btn {
+      border-top: 1px solid #ccc;
+  }
+
+
+  /* アコーディオンスタイル */
+  /*-----------------------------*/
+  .acordion-menu-wrapper {
+    background-color: #fff
+  }
+
+  .acordion-btn {
+    display: flex;
+    align-items: flex-start;
+  }
+
+
+  .hamburger-window__title {
+    color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .acordion > .acordion__item {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: clamp(0.875rem, 0.821rem + 0.24vw, 1rem);
+    font-family: "LINE Seed JP";
+    font-weight: bold;
+    color: var(--mainColor);
+    line-height: 0;
+    /* 閉じるアニメーション */
+    transition: border-top .1s ease-out,
+  }
+
+  .acordion.is-open {
+    transition: ease-in .3s;
+    margin-top: 2rem;
+  }
+
+  .acordion.is-open > .acordion__item {
+    margin-bottom: 1.5rem;
+    transition: border-top .1s ease-out,
+  }
+
+  .acordion.is-open > .acordion__item:last-of-type {
+    margin-bottom: 0;
+    transition: border-top .1s ease-out,
+  }
+
+  .acordion.is-open > .acordion__item:first-child {
+    border-top: none;
+  }
+
+  .acordion.is-open > .acordion__item::after {
+    /* fontawesomeアイコンを表示 */
+    font-weight: 900;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 10px;
+    aspect-ratio: 1/1;
+  }
+
+  .acordion > .acordion__item > .acordion__link {
+    color: var(--mainColor);
+    display: block;
+    padding-left: 1rem;
+    /* 閉じている状態 */
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    /* 閉じるアニメーション */
+    transition:
+      padding-top .3s ease-out,
+      padding-bottom .3s ease-out,
+      line-height .3s ease-out,
+      opacity .1s linear,
+      visibility .1s linear;
+  }
+
+  .acordion.is-open > .acordion__item > .acordion__link {
+    display: block;
+    /* 閉じている状態 */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    line-height: 1;
+    opacity: 1;
+    visibility: visible;
+    /* 開くアニメーション */
+    transition:
+        padding-top .3s ease-out,
+        padding-bottom .3s ease-out,
+        line-height .3s ease-out,
+        opacity .1s linear,
+        visibility .1s linear;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* メニューウィンドウ */
+  /*-----------------------------*/
+  #hamburger-window {
+    width: 80vw;
+  }
+
+  #header-hamburger {
+    width: 36px;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    /* ボタンがハンバーガーウィンドウの下に隠れないようにする指定 */
+    position: relative;
+    z-index: 10;
+  }
+
+  #header-hamburger::after {
+    font-size: 14px;
+  }
+
+  /* 三本線 */
+  #header-hamburger span {
+    height: 2px;
+  }
+  
+  #header-hamburger span:nth-of-type(1) {
+      top: 50%;
+  }
+  
+  #header-hamburger span:nth-of-type(2) {
+      top: 70%;
+  }
+
+  #header-hamburger span:nth-of-type(3) {
+      top: 90%;
+  }
+
+  /* ×印 */
+  /*activeクラスが付与されると線が回転して×になる*/
+  #header-hamburger.active span:nth-of-type(1) {
+    top: 70%;
+  }
+
+  #header-hamburger.active span:nth-of-type(3) {
+    top: 70%;
+  }
+}
+
+
+
+/*-----------------------------*/ 
+/* recruit */ 
+/*-----------------------------*/
+.recruit {
+  width: 100%;
+  background-image: linear-gradient(40deg,
+    rgba(0, 81, 73, 1) 43%,
+    rgba(53, 115, 71, 1) 66%, 
+    rgba(126, 162, 68, 1) 84%,
+    rgba(217, 220, 65, 1));
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 12.5rem;
+  overflow: hidden;
+  max-height: 748px;
+}
+
+.recruit__text {
+  width: 30%;
+  margin: 6rem 9.25rem;
+  z-index: 30;
+}
+
+.recruit__text h2 {
+  font-family: 'LINE Seed JP';
+  font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+  font-weight: bold;
+  color: var(--subColor);
+  margin-bottom: 3.5rem;
+}
+
+.recruit__text p {
+  font-size: clamp(1.5rem, 1.269rem + 1.03vw, 2.5rem);
+  font-weight: bold;
+  font-family: "LINE Seed JP";
+  color: #fff;
+  line-height: 160%;
+  margin-bottom: 2.5rem;
+}
+
+.recruit__text p:last-of-type {
+  font-size: clamp(0.813rem, 0.769rem + 0.19vw, 1rem);
+  line-height: 180%;
+  letter-spacing: 0.06em;
+  margin-bottom: 4.5rem;
+  font-weight: normal;
+  font-family: "Noto Sans JP";
+}
+
+/* slider */
+@keyframes vertical-animation {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.slider-container {
+  height: 100%;
+  display: inline;
+  overflow: hidden;
+  transform: translate(20%,-5%) rotate(29deg);
+  transform-origin: 3rem 3rem;
+}
+
+.slider-wrapper {
+  display: grid; /* slideのmargin-bottom値を全て内包させる為 */
+  animation: vertical-animation 29s linear infinite;
+  background: var(--subColor);
+  padding-inline: 2rem;
+}
+
+.slide {
+  width: 400px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+@media (max-width: 1200px) {
+  .recruit {
+    padding: 3rem 4%;
+    margin-block: 5.5rem;
+  }
+
+  .recruit__text {
+    width: 50%;
+    margin: 0;
+  }
+
+  .slider-container {
+    transform: translate(70%, -5%) rotate(29deg);
+  }
+
+  .slide {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    padding-inline: 1rem;
+  }
+
+  .recruit__text {
+    width: 100%;
+  }
+
+  .recruit__text h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .recruit__text p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .recruit__text p:last-of-type {
+    margin-bottom: 2.5rem;
+    
+  }
+
+  .slider-container {
+    width: 80%;
+    transform: translate(190%, -5%) rotate(32deg);
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .recruit__text > .primary-btn {
+    padding: .5rem 1.5rem;
+  }
+}
+
+
+
+/*-----------------------------*/ 
+/* footer */ 
+/*-----------------------------*/
+footer {
+  background: var(--mainColor);
+  width: 100vw;
+  border-radius: 2rem 2rem 0 0;
+  padding: 5.5rem 10% 2.5rem;
+}
+
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.footer__logo,
+.footer__links {
+  width: calc(100% / 2);
+}
+
+/* footer left */
+.footer__logo {
+  display: flex;
+  gap: 12.5rem;
+  flex-direction: column;
+}
+
+.footer__logo-container {
+  width: 70%;
+  display: flex;
+  gap: 4.5rem;
+  flex-direction: column;
+}
+
+.footer__logo-container img {
+  width: minmax(160px,416px);
+  height: auto;
+}
+
+.footer__logo-address {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__logo-address img {
+  max-width: 144px;
+  max-height: 61px;
+}
+
+.footer__logo-address--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.footer__logo-text p {
+  font-size: clamp(0.813rem, 0.74rem + 0.32vw, 1.125rem);
+}
+
+.footer__logo-address--text p:first-of-type {
+  font-weight: bold;
+  font-size: clamp(0.875rem, 0.731rem + 0.64vw, 1.5rem);
+}
+
+/* footer right */
+.footer__links {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer__links-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+
+.footer__links-list li a {
+  color: #fff;
+}
+
+.footer__links-list:first-of-type { /* footer right-top */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__links-list li {
+  font-family: 'LINE Seed JP';
+  font-weight: bold;
+  font-size: clamp(0.875rem, 0.615rem + 1.15vw, 2rem);
+  width: 50%;
+  margin-bottom: 2.5rem;
+}
+
+.footer__links-list:first-of-type li a p {
+  font-family: 'Noto sans JP';
+  font-weight: normal;
+  font-size: clamp(0.75rem, 0.692rem + 0.26vw, 1rem);
+}
+
+
+.footer__links-list:last-of-type li { /* footer right-bottom */
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-family: 'Noto sans jp';
+}
+
+.footer__links-list li:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* footer bottom */
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--subColor);
+  padding-top: 2.5rem;
+}
+
+.footer__copyright a,
+.footer__copyright p {
+  color: #fff;
+  font-size: clamp(0.813rem, 0.74rem + 0.32vw, 1.125rem);
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 5.5rem 4% 2.5rem;
+  }
+  
+  .footer__logo {
+    gap: 8.5rem;
+  }
+
+  .footer__logo-container {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .footer__logo-address {
+    flex-wrap: wrap;
+  }
+
+  .footer__links-list li {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .footer__links-list:last-of-type li {
+    margin-bottom: 1rem;
+  }
+}

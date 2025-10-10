@@ -1,0 +1,336 @@
+<?php
+require './news/wp-blog-header.php'; 
+?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PYN7DKV7X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0PYN7DKV7X');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="社会福祉法人 若竹会の情報公開ページです。財務状況、現況報告書、定款など、法人運営に関する重要情報を公開しています。">
+  <title>情報公開｜社会福祉法人 若竹会（滋賀県草津市）</title>
+  <link href="https://cdn.jsdelivr.net/npm/line-seed-jp@0.0.5/line-seed-jp.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/information.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
+</head>
+<body>
+  <!-- header -->
+  <header class="l-header pc-header">
+    <div class="l-header--logo"><a href="./index.html"><img src="../assets/images/logo_01.png" alt="ロゴ"></a></div>
+    <nav class="p-navigation-global" aria-label="グローバルメニュー">
+
+      <ul class="p-navigation-global__list">
+
+        <a href="./news.html"><li>お知らせ<span>News</span></li></a>
+        <a href="./about us.html"><li>若竹会について<span>About us</span></li></a>
+        <a href="./lecture&tour.html"><li>講演会/見学<span>Lecture & tour</span></li></a>
+
+        <li class="js-megaMenu p-navigation-global__list-item p-megaMenu">
+          <button type="button" class="js-button-megaMenu p-megaMenu__open" aria-expanded="false"
+            aria-controls="menu2">事業所紹介<span>Service</span></button>
+
+            <nav id="menu2" class="p-megaMenu__navigation" aria-label="事業所のサブメニュー">
+              <ul class="p-megaMenu__list">
+                  <li class="p-megaMenu__list-item">
+                    <a href="./service/wakatake.html">
+                      <div class="p-megaMenu__list-visual">
+                        <img src="./assets/images/top__wkt02.jpg" alt="若竹作業所">
+                        <div class="p-megaMenu__list-tittle"><h2>若竹作業所</h2></div>
+                      </div>
+                    </a>
+                  </li>
+                
+                  <li class="p-megaMenu__list-item">
+                    <a href="./service/yamadera.html">
+                      <div class="p-megaMenu__list-visual">
+                        <img src="../assets/images/top__ymd02.jpg" alt="山寺作業所">
+                        <div class="p-megaMenu__list-tittle"><h2>山寺作業所</h2></div>
+                      </div>
+                    </a>
+                  </li>
+                
+                  <li class="p-megaMenu__list-item">
+                    <a href="./service/consultation.html">
+                      <div class="p-megaMenu__list-visual">
+                        <img src="../assets/images/top__cons02.jpg" alt="指定特定相談支援事業所わかたけ">
+                        <div class="p-megaMenu__list-tittle"><h2>指定特定相談支援事業所<br>わかたけ</h2></div>
+                      </div>
+                    </a>
+                  </li>
+                
+                  <li class="p-megaMenu__list-item">
+                    <a href="./service/help-st.html">
+                      <div class="p-megaMenu__list-visual">
+                        <img src="../assets/images/top__help02.jpg" alt="ヘルプステーションわかたけ">
+                        <div class="p-megaMenu__list-tittle"><h2>ヘルプステーションわかたけ</h2></div>
+                      </div>
+                    </a>
+                  </li>
+                
+                  <li class="p-megaMenu__list-item">
+                    <a href="./service/workstation.html">
+                      <div class="p-megaMenu__list-visual">
+                        <img src="../assets/images/top__ws02.jpg" alt="ワークステーションわかたけ">
+                        <div class="p-megaMenu__list-tittle"><h2>ワークステーションわかたけ</h2></div>
+                      </div>
+                    </a>
+                  </li>
+              </ul>
+            </nav>
+
+        </li>
+
+        <a href="https://www.wakatake.info/recruit/"><li class="p-navigation-global__list-item">採用ページ<span>Recruit</span></li></a>
+        <a href="./contact.html">
+          <li class="p-navigation-global__list-item header-btn">お問い合わせ<span>Contact</span></li>
+        </a>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- sp header -->
+  <header id="header" class="header sp__header">
+    <div class="sp__header--container">
+      <div class="sp__header--logo"><a href="./index.html"><img src="./assets/images/logo_01.png" alt="ロゴ"></a></div>
+      <div id="header-inner" class="header-inner content-wrpper">
+
+        <!-- ハンバーガーボタン -->
+        <div id="header-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ハンバーガーウィンドウ -->
+    <nav id="hamburger-window">
+      <ul class="hamburger-window__nav-list">
+
+        <li class="hamburger-window__link">
+          <a href="./news.html">お知らせ<span>News</span></a>
+        </li>
+
+        <li class="hamburger-window__link">
+          <a href="./about us.html">若竹会について<span>About us</span></a>
+        </li>
+
+        <li class="hamburger-window__link">
+          <a href="./lecture&tour.html">講演会/見学<span>Lecture&Tour</span></a>
+        </li>
+
+
+        <li class="hamburger-window__link">
+          <div class="acordion-menu-wrapper">
+            <a class="acordion-btn" href="#">
+              <p class="hamburger-window__title">事業所紹介<span>Service</span></p>
+            </a>
+
+            <ul class="acordion">
+
+              <li class="acordion__item">
+                <a class="acordion__link" href="./service/wakatake.html">若竹作業所</a>
+              </li>
+
+              <li class="acordion__item">
+                <a class="acordion__link" href="./service/yamadera.html">山寺作業所</a>
+              </li>
+
+              <li class="acordion__item">
+                <a class="acordion__link" href="./service/consultation.html">指定特定相談支援事業所わかたけ</a>
+              </li>
+
+              <li class="acordion__item">
+                <a class="acordion__link" href="./service/help-st.html">ヘルプステーションわかたけ</a>
+              </li>
+
+              <li class="acordion__item">
+                <a class="acordion__link" href="./service/workstation.html">ワークステーションわかたけ</a>
+              </li>
+
+            </ul>
+          </div>
+        </li>
+
+        <li class="hamburger-window__link">
+          <a href="https://wakatake.info/recruit">採用ページ<span>Recruit</span></a>
+        </li>
+
+        <li class="hamburger-window__link">
+          <a href="./contact.html">お問い合わせ<span>Contact</span></a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- body -->
+  <main>
+    <section class="page__heading">
+      <div class="page__tittle">
+        <h2>情報公開</h2>
+      </div>
+    </section>
+
+    <!-- information__list -->
+    <section class="information">
+      <ul class="information__list--outer">
+        <?php
+        $args = array(
+          'numberposts'	=> 10,
+          'orderby' => 'date',
+          'order' => 'DESC',
+          'post_type' => 'information'
+        );
+      
+        $recent_posts = get_posts($args);
+        ?>
+        <?php
+        if( ! empty( $recent_posts ) ){
+          foreach ( $recent_posts as $post ){
+            setup_postdata($post);
+            $id = get_the_ID();
+        ?>
+        <li class="information__list">
+          <div class="information__list--inner">
+            <img src="./assets/images/filetype-pdf.png" alt="PDF">
+            <h2><?php the_title(); ?></h2>
+          </div>
+          <?php
+            //投稿ID取得
+            $scf_field = SCF::get('hyoka-file',$id);
+            wp_get_attachment_url($scf_field);
+          ?>
+          <button class="primary-btn"><a href="<?php echo wp_get_attachment_url($scf_field); ?>">ダウンロード</a></button>
+        </li>
+            <?php
+          }
+        }
+        ?>
+
+      </ul>
+    </section>
+
+<!-- ページナビ -->
+    <div class="pagination">
+      <?php wp_pagenavi(); ?>
+    </div>
+
+    <!-- recruit -->
+    <section class="recruit">
+      <div class="recruit__text">
+        <h2>Recruit</h2>
+        <p>私たちが社会へ<br>繋いでいく</p>
+        <p>
+          孤立を防ぎ、支え合いを広げる。
+          障害を抱える方々と地域社会を繋げることで、サービス利用者に新しい価値を見出す。
+          若竹会は、人と社会を繋ぐ役割を担っています。
+        </p>
+        <button class="primary-btn"><a href="https://wakatake.info/recruit">採用ページへ</a></button>
+      </div>
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <div class="slide">
+            <img src="./assets/images/recruit.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit02.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit03.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit04.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit05.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit06.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+        </div>
+
+        <div class="slider-wrapper">
+          <div class="slide">
+            <img src="./assets/images/recruit.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit02.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit03.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit04.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit05.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+          <div class="slide">
+            <img src="./assets/images/recruit06.jpg" width="400" height="266" alt="スライダー画像">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer__container">
+      <div class="footer__logo">
+        <div class="footer__logo-container">
+          <img src="./assets/images/logo_02.png" alt="ロゴ">
+          <img src="./assets/images/message.png" alt="コピー">
+        </div>
+        <div class="footer__logo-address">
+          <img src="./assets/images/50aniv_01.png" alt="50周年ロゴ">
+          <div class="footer__logo-address--text">
+            <p>社会福祉法人　若竹会</p>
+            <p>滋賀県草津市川原町298-1</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__links">
+        <ul class="footer__links-list">
+          <li><a href="./news.html">News<p>ニュース一覧</p></a></li>
+          <li><a href="./about us.html">About us<p>若竹会について</p></a></li>
+          <li><a href="./lecture&tour.html">Lecture&amp;Tour<p>講演と見学</p></a></li>
+          <li><a href="https://wakatake.info/recruit">Recruit<p>採用ページ</p></a></li>
+          <li><a href="./contact.html">Contact<p>お問い合わせ</p></a></li>
+          <li><a href="https://www.wam.go.jp/wamnet/zaihyoukaiji/pub/PUB0201000E00.do?_FORMID=PUB0219000&vo_headVO_corporationId=1625114566">情報公開</a></li>
+        </ul>
+        <ul class="footer__links-list">
+          <li><a href="./service/wakatake.html">若竹作業所</a></li>
+          <li><a href="./service/yamadera.html">山寺作業所</a></li>
+          <li><a href="./service/consultation.html">指定特定相談支援事業所わかたけ</a></li>
+          <li><a href="./service/help-st.html">ヘルプステーションわかたけ</a></li>
+          <li><a href="./service/workstation.html">ワークステーションわかたけ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <a href="./privacy-policy.html">プライバシーポリシー</a>
+      <p>© 社会福祉法人若竹会</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/news.js"></script>
+</body>
+</html>

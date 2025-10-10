@@ -1,0 +1,641 @@
+
+
+:root {
+  --mainColor: #005149;
+  --subColor: #A8BD38;
+  --accentColor: #D9DC41;
+  --textColor: #002724;
+  --bgColor: #FEFFFD;
+  --gray: #C5C5C5;
+}
+
+
+/*-----------------------------*/ 
+/* loading */ 
+/*-----------------------------*/
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: opacity 1s ease-out;
+  z-index: 9999;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loading__container img {
+  width: 80vw;
+  max-width: 416px;
+  height: auto;
+}
+
+.loading__container p {
+  font-family: "LINE Seed JP";
+  letter-spacing: 0.06em;
+  font-size: clamp(0.875rem, 0.731rem + 0.64vw, 1.5rem);
+  color: var(--subColor);
+}
+
+/*-----------------------------*/ 
+/* メインビジュアル */ 
+/*-----------------------------*/
+main {
+  width: 100%;
+  padding: 0 7%;
+}
+
+.main__visual {
+  display: block;
+  position: relative;
+}
+
+.main__visual-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main__visual-text br:first-of-type {
+  display: none;
+}
+
+.main__visual-text p {
+color: var(--mainColor);
+font-weight: bold;
+font-size: clamp(1.5rem, 0.462rem + 4.62vw, 6rem);
+margin-block: 11.625rem;
+line-height: 140%;
+letter-spacing: 0.04em;
+position: relative;
+}
+
+.main__visual-text p::after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 100%;
+  position: absolute;
+  right: -5rem;
+  top: .5rem;
+  background: var(--subColor);
+  transform: skewX(-36deg);
+}
+
+.main__visual-text img {
+  height: 100%;
+}
+
+.main__visual-text p span {
+  color: var(--subColor);
+}
+
+.main__visual-sns {
+  position: absolute;
+  right: -5%;
+  top: 4.65625rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__visual-sns span {
+  writing-mode: vertical-lr;
+  font-family: 'LINE Seed JP';
+  font-size: clamp(0.875rem, 0.731rem + 0.64vw, 1.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.main__visual-sns img {
+  width: 100%;
+  max-width: 24px;
+}
+
+.main__visual-img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  border-radius: 1rem;
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding: 0 4%;
+  }
+
+  .main__visual-text p {
+    margin-block: 5.625rem;
+  }
+
+  .main__visual-sns {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .main__visual-img {
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .main__visual-text br:first-of-type {
+    display: block;
+  }
+
+  .main__visual-text p {
+    margin-block: 3rem;
+  }
+
+  .main__visual-text p::after {
+    width: .75rem;
+    right: -5rem;
+    top: .5rem;
+  }
+}
+
+
+/*yamamoto 20251010追加*/
+.linktag  a {
+  padding:10px;
+}
+
+/*-----------------------------*/ 
+/* news */ 
+/*-----------------------------*/
+.news {
+  width: 100%;
+  background-image: linear-gradient(
+    40deg,
+    rgba(0, 81, 73, 1) 43%,
+    rgba(53, 115, 71, 1) 66%, 
+    rgba(126, 162, 68, 1) 84%,
+    rgba(217, 220, 65, 1));
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 6rem 5%;
+  margin-top: 5.5rem;
+  margin-bottom: 16.625rem;
+}
+
+.news__container {
+  max-width: 287px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news__container h2 {
+  font-family: 'LINE Seed JP';
+  font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+  font-weight: bold;
+  color: var(--subColor);
+  margin-bottom: 3.5rem;
+}
+
+.news__container p {
+  font-size: clamp(0.813rem, 0.769rem + 0.19vw, 1rem);
+  color: #fff;
+  line-height: 180%;
+  letter-spacing: 0.08em;
+  margin-bottom: 4.5rem;
+}
+
+.news__container-info {
+  padding-left: 0;
+  max-width: 812px;
+}
+
+.news__list {
+  display: flex;
+  margin-bottom: .5rem;
+  background-color: var(--bgColor);
+  padding: 1.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  min-width: 540px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .news__list {
+    height: 232px;
+    overflow: hidden;
+  }
+}
+
+.news__list:hover {
+  opacity: 0.9;
+}
+
+.news__list:last-of-type {
+  margin-bottom: 0;
+}
+
+.news__desc {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.news_title {
+  margin: 0;
+  font-size: clamp(1rem, 0.946rem + 0.24vw, 1.125rem);
+  line-height: 180%;
+  color: var(--subColor);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.news_lead {
+  margin: 0;
+  font-size: clamp(0.813rem, 0.732rem + 0.36vw, 1rem);
+  line-height: 180%;
+  color: var(--textColor);
+}
+
+.news_text {
+  display: none;
+}
+
+.news_thumb img {
+  max-width: 298px;
+  height: 100%;
+  border-radius: 6px;
+}
+
+
+/* slide-panel */
+.modal-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--textColor);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.slide-panel-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slide-panel {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: -45vw;
+  width: 45vw;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: right 0.3s ease;
+  overflow: scroll;
+}
+
+.slide-panel.is-visible {
+  right: 0; /* 横にスライドイン */
+}
+
+.slide-panel h3 {
+  font-size: clamp(1.5rem, 1.071rem + 1.9vw, 2.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+  letter-spacing: 0.06em;
+  line-height: 160%;
+  margin-bottom: 2rem;
+}
+
+.slide-panel-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 3.5rem;
+  border-radius: 1rem;
+}
+
+.slide-panel-text {
+  font-size: clamp(0.813rem, 0.679rem + 0.6vw, 1.125rem);
+  line-height: 180%;
+  letter-spacing: 0.08em;
+  color: var(--textColor);
+}
+
+
+@media (max-width: 1200px) {
+  .news {
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 3rem 4%;
+    margin-bottom: 6.5rem;
+  }
+
+  .news__container-info  {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .slide-panel {
+    padding: 1rem;
+    width: 70vw;
+    right: -70vw;
+  }
+}
+
+@media (max-width: 768px) {
+.news {
+  padding: 3rem 4% 2rem;
+}
+
+  .news__container h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .news__container p {
+    margin-bottom: 2.5rem;
+  }
+
+  .news__container-info  {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .news__list {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .news__desc {
+    padding: 1rem 0;
+  }
+
+  .news_thumb img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slide-panel {
+    padding: 1rem;
+    width: 90vw;
+    right: -90vw;
+  }
+}
+
+
+/*-----------------------------*/ 
+/* about us, lecture&tour */ 
+/*-----------------------------*/
+.aboutUs {
+  margin-bottom: 4.5rem;
+}
+
+.container-fluid {
+  display: flex;
+  gap: 2vw;
+}
+
+.container-fluid img {
+  width: min(880px,100%);
+  height: auto;
+  border-radius: .5rem;
+}
+
+.container__text div {
+  margin-bottom: 2.5rem;
+}
+
+.container__text h2 {
+  font-family: 'LINE Seed Jp';
+  font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+  font-weight: bold;
+  color: var(--subColor);
+  margin-bottom: 3.5rem;
+}
+
+.container__text p {
+  font-size: clamp(1.5rem, 1.269rem + 1.03vw, 2.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+  line-height: 160%;
+  margin-bottom: 2.5rem;
+}
+
+
+.lectureAndtour {
+  margin-bottom: 12.5rem;
+}
+
+@media (max-width: 1200px) {
+  .aboutUs {
+    margin-bottom: 5.5rem;
+  }
+
+  .container-fluid {
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .aboutUs > .container-fluid {
+    flex-wrap: wrap-reverse;
+  }
+
+  .container-fluid img {
+    width: 100%;
+  }
+
+  .container__text h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .container__text p:first-of-type {
+    margin-bottom: 1rem;
+  }
+  
+  .container__text p:last-of-type {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/*-----------------------------*/ 
+/* service */ 
+/*-----------------------------*/
+.service h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: 'LINE Seed JP';
+  font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+  font-weight: bold;
+  color: var(--subColor);
+  margin-bottom: 3.5rem;
+}
+
+
+.details {
+	border-top: 2px solid #f2f2f2;
+  background: #F6F7F2;
+}
+
+.details:last-of-type {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.details-summary {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+	padding: 4rem 3.5rem;
+	color: var(--mainColor);
+	font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+	font-weight: bold;
+	text-align: center;
+	background-color: #F6F7F2;
+}
+
+.details-summary h3 {
+  font-weight: bold;
+  font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+}
+
+.details-summary h3 a {
+  color: var(--mainColor);
+}
+
+.arrow span {
+  background-color: transparent;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+  width: 2rem;
+}
+
+.arrow span {
+  transition: all .5s;
+}
+
+details[open] summary .arrow {
+  transition: transform 0.4s ease-in-out;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.arrow span::before {
+  border-right: 3px solid var(--mainColor);
+  border-top: 3px solid var(--mainColor);
+  bottom: 0;
+  content: "";
+  margin: auto;
+  position: absolute;
+  right: 0.75rem;
+  transform: rotate(45deg);
+  transition: all .5s; 
+  width: 2rem;
+  height: 2rem;
+}
+
+.details-summary:before {
+    width: 4px;
+    height: 18px;
+    top: 0;
+    left: 7px;
+}
+    
+.details-summary.is-active.btn {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+} 
+
+.details-summary.is-active.btn:before {
+  content: none;
+}
+
+
+.details-summary::-webkit-details-marker {
+	display: none;
+}
+
+.details-content {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 3.5rem;
+}
+
+
+.details-content-inner:first-of-type {
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.details-content-inner:last-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-content img {
+	width: 48%;
+  height: auto;
+  border-radius: .5rem;
+}
+
+.details-content p {
+  color: var(--textColor);
+  font-size: clamp(0.813rem, 0.769rem + 0.19vw, 1rem);
+  line-height: 180%;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1200px) {
+  .details-content {
+    flex-wrap: wrap;
+  }
+
+  .details-content-inner:first-of-type {
+    gap: 2rem;
+  }
+
+  .arrow span::before {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .details-summary {
+    padding: 2rem 1.5rem;
+  }
+
+  .details-content {
+    padding: 0 1.5rem 2rem;
+  }
+}
+
+
+

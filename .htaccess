@@ -1,0 +1,7 @@
+SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
+SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
+SetEnvIf Request_URI ".*" WpLoginNoLimit
+
+AddHandler fcgid-script .html
+
+Redirect 301 /ws/plus_lab.html https://wakatake.info/pluslab/

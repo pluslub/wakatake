@@ -1,0 +1,266 @@
+
+:root {
+  --mainColor: #005149;
+  --subColor: #A8BD38;
+  --accentColor: #D9DC41;
+  --textColor: #002724;
+  --bgColor: #FEFFFD;
+  --gray: #C5C5C5;
+}
+
+
+
+
+/*========== news ==========*/
+main {
+  padding-inline: 7%;
+}
+
+.news {
+  width: 100%;
+  max-height: 40rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 5.5%;
+}
+
+.news__tittle {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  margin: 13.5rem 0 15rem 0;
+}
+
+.news__tittle h2 {
+  font-family: 'LINE Seed JP';
+  font-size: clamp(2rem, 1.423rem + 2.56vw, 4.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.news__tittle h2 p {
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  color: #c5c5c5;
+}
+
+.news__text {
+  font-size: clamp(0.875rem, 0.731rem + 0.64vw, 1.5rem);
+  color: var(--textColor);
+  letter-spacing: 0.04em;
+  line-height: 180%;
+}
+
+.news__container {
+  padding-inline: 5.5%;
+  margin-bottom: 10rem;
+}
+
+.container > div {
+  background-color: var(--mainColor);
+  padding: 1rem;
+  border-radius: .5rem;
+
+}
+
+/* ----------------------------------------- */
+/* Subgrid */
+/* ----------------------------------------- */
+
+.container {
+  /* グリッドコンテナ */
+  display: grid;
+  /* 最小256px、最大1frの列を繰り返しつくる */
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  /* 余白 */
+  gap: 1rem;
+  margin-bottom: 7rem;
+}
+
+.item {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+}
+
+
+/* 以下装飾 */
+/* ----------------------------------------- */
+.item_title {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--subColor);
+  font-weight: bold;
+}
+
+.item_lead {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 2;
+  color: #fff;
+}
+
+.item_text {
+  display: none;
+}
+
+.item_thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.item > .primary-btn {
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: .5rem 1rem;
+}
+
+.primary-btn {
+  cursor: pointer;
+}
+
+
+
+/* slide-panel  */
+/* ----------------------------------------- */
+.modal-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--textColor);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.slide-panel-close {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slide-panel {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: -45vw;
+  width: 45vw;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  transition: right 0.3s ease;
+  overflow: scroll;
+}
+
+.slide-panel.is-visible {
+  right: 0; /* 横にスライドイン */
+}
+
+.slide-panel h3 {
+  font-size: clamp(1.5rem, 1.071rem + 1.9vw, 2.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+  letter-spacing: 0.06em;
+  line-height: 160%;
+  margin-bottom: 2rem;
+}
+
+.slide-panel-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 3.5rem;
+  border-radius: 1rem;
+}
+
+.slide-panel-text {
+  font-size: clamp(0.813rem, 0.679rem + 0.6vw, 1.125rem);
+  line-height: 180%;
+  letter-spacing: 0.08em;
+  color: var(--textColor);
+}
+
+
+/* page nation  */
+/* ----------------------------------------- */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a {
+  color: #c5c5c5;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: var(--mainColor);
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 1200px) {
+  .news__tittle {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .news__text br {
+    display: none;
+  }
+
+  .news__container-inner {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .slide-panel {
+    padding: 1rem;
+    width: 70vw;
+    right: -70vw;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .news__container {
+    margin-bottom: 8rem;
+  }
+
+  .news__tittle {
+    margin: 8.5rem 0 7rem 0;
+  }
+
+  .news__container-inner {
+    justify-content: center;
+    margin-bottom: 7rem;
+  }
+
+  main {
+    padding-inline: 4%;
+  }
+
+  .container {
+    margin-bottom: 5rem;
+  }
+
+  .slide-panel {
+    padding: 1rem;
+    width: 90vw;
+    right: -90vw;
+  }
+}
+
+

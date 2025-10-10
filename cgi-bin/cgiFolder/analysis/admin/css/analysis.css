@@ -1,0 +1,620 @@
+@charset "UTF-8";
+
+/*============================*/
+/*初期状態*/
+/*============================*/
+*{
+	margin:0;
+	padding:0;
+	
+}
+
+html {
+	overflow-y:scroll;
+	height:100%;
+	
+	
+}	
+
+
+table {
+	border-collapse:separate;
+	border-spacing:0;
+	border:none;
+}
+
+th,td{
+	vertical-align:middle;
+	font-weight:normal;
+	text-align:left;
+}
+
+em,address,dfn{
+	font-style:normal;
+}
+
+img { 
+	border:0;
+}
+strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul,li {
+	list-style:none;
+}
+
+li{
+	display:list-item;
+}
+h1,h2,h3 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+input,select {
+	font-size:100%;
+	}
+
+textarea{
+	font-size:100%;
+	}
+
+/*============================*/
+/*html,body*/
+/*============================*/
+
+body {
+	font-size: 80%;
+	font-family:"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", sans-serif ;
+	line-height:1.5;
+	height:100%;
+	background-color:#ffffff;
+	background:#ffffff url('../../img/analysis/contents_bg.jpg') repeat-y top left;
+	}
+
+a:link {
+	color: #005c9c;
+	text-decoration: none;
+}
+a:visited {
+	color: #005c9c;
+	text-decoration: none;
+}
+a:hover {
+	color: #005c9c;
+	text-decoration: underline;
+}
+a:active {
+	color: #005c9c;
+	text-decoration: none;
+}
+/*============================*/
+/*input*/
+/*============================*/
+input,select {
+	margin:2px 0;
+	}
+	
+/*============================*/
+/*文字の色などの個別設定*/
+/*============================*/
+span.r_txt {
+	color: #FF0000;
+	}
+
+/*============================*/
+/*回り込みの強制解除*/
+/*============================*/
+.fboth {
+	clear:both;
+	}
+
+/*============================*/
+/*ヘッダー設定  開始*/
+/*ヘッダー*/
+/*============================*/
+
+#container {
+		background: url('../../img/analysis/header1_bg.jpg') repeat-x 0 0;
+		width: 100%;
+		margin:0 auto;
+		padding:0;
+		height:100%;
+		}
+
+body > #container {
+        height: auto; min-height:100%;
+}
+
+#header {
+		background:transparent url('../../img/analysis/header-text-area_bg.jpg') no-repeat top right;
+		width: 100%;
+		min-width:800px;
+		height: 78px;
+		margin: 0;
+}
+
+/*============================*/
+/*ヘッダーのタイトル部分*/
+/*============================*/
+
+#head_tit{
+	float: left;
+	display:block;
+	background:transparent url('../../img/analysis/head_tit_bg.jpg') no-repeat 0 0;
+	height:78px;
+	}
+#head_tit img{
+	display:block;
+	margin-top:14px;
+	margin-left:10px;
+	}
+
+#header h1{
+	position:relative; top: 30px; left:20px;
+	margin: 0px;
+	color: #FFFFFF;
+	font-size:24px;
+	float:left;
+	display:block;
+}
+
+#header-text-area {
+	text-align: right;
+	height:80px;
+	float: right;
+}
+
+#header-application-link {
+	font-size: 10px;
+	color: #000000;
+	margin-right: 15px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+#header-application-link img{
+	vertical-align:middle;
+	margin-right:5px;
+}
+
+#header-application-link a {
+	margin-right:10px;
+	text-decoration: none;
+	color: #ccc;
+}
+
+#header-application-link a:hover {
+	text-decoration: underline;
+	color: #ccc;
+}
+
+/*============================*/
+/*ヘッダー設定  終了*/
+/*============================*/
+
+
+/*============================*/
+/*左のメニュー部分の設定  開始*/
+/*左サイド*/
+/*============================*/
+
+#contents {
+		width:100%;
+		margin:0 auto;
+		padding-bottom:10px;
+		}
+
+/*============================*/
+/*ClearFix*/
+/*============================*/
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+.clearfix {
+	display: inline-block;
+	}
+
+* html .clearfix {
+	height: 1%;
+	}
+.clearfix {
+	display: block;
+	}
+
+
+#left1 {
+		float: left;
+		width: 220px;
+		margin-top: 0px;
+		padding-left: 0px;
+		text-align:left;
+		padding-top:15px;
+}
+
+div#sidebar
+{
+	margin-bottom:0px;
+	width:220px;
+}
+
+div.contents-menu
+{
+	margin-bottom:10px;
+	width:220px;
+	background-color:#eeeeee;
+}
+
+div.contents-menu h2.logtitle
+{
+	font-weight:normal;
+	text-indent:-9999px;
+	width:215px;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	margin-bottom:0px;
+	margin-left:5px;
+	background-image:url('../../img/analysis/log_tit.jpg');
+	height:40px;
+}
+
+div.contents-menu h2.conftitle
+{
+	font-weight:normal;
+	text-indent:-9999px;
+	width:215px;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	margin-bottom:0px;
+	margin-left:5px;
+	background-image:url( '../../img/analysis/conf_tit.jpg');
+	height:40px;
+}
+
+/*============================*/
+/*メニュー項目部分で使用 */
+/*============================*/
+div.category-archives
+{
+	font-size:100%;
+	width:210px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	padding-bottom:10px;
+	background-image:url('../../img/analysis/contents_bottom.jpg');
+	background-position:bottom;
+	background-repeat:no-repeat;
+}
+
+div.category-archives ul
+{
+	list-style:none;
+	width:190px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	background-color:#ffffff;
+	padding:1px 0 1px 0;
+}
+
+div.category-archives ul li
+{
+	background-image: url('../../img/analysis/menu-img.gif');
+	width:190px;
+	background-position: 0px 0px;
+	background-repeat:repeat-x;
+	padding:0px 0 1px 0;
+}
+
+
+div.category-archives ul li a
+{
+	padding:10px 0;
+	display:block;
+	width:190px;x;
+	border-bottom:1px #ccc solid;
+	border-top:1px #ffffff solid;
+	background-image: url('../../img/analysis/menu-img.gif');
+	background-position: 0px 0px;
+	text-indent:40px;
+}
+
+div.category-archives ul li a:hover
+{
+	border-bottom:1px #ccc solid;
+	border-top:1px #ffffff solid;
+	background-image: url('../../img/analysis/menu-img.gif');
+	background-position: 0px 150px;
+}
+
+/*============================*/
+/*左のメニュー部分の設定  終了*/
+/*============================*/
+
+
+
+/*============================*/
+/*#right　メイン部分に対するスタイルの設定*/
+/*============================*/
+/*============================*/
+/*右側サイド*/
+/*============================*/
+
+#right1 {
+		text-align: left;
+		padding-top:15px;
+		margin: 0px 20px 0 240px;
+		min-width:580px;
+}
+
+/*============================*/
+/*見出しの指定*/
+/*============================*/
+
+#right1 h2 {
+	padding: 0px;
+	margin: 0;
+	font-size:14px;
+	height:27px;
+	line-height:2;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	background-color: #ffffff;
+	color:#333333;
+}
+
+#right h4{
+	font-size:14px;
+	color:#FF6600;
+	height:27px;
+	line-height:2;
+	letter-spacing:0.1em;
+	font-weight:bold;
+}
+
+/*============================*/
+/*解析結果一覧用設定　ここから*/
+/*============================*/
+/*=======================*/
+/*解析画面  項目見出し   */
+/*=======================*/
+div.list_index {
+	width:600px;
+	padding: 2px 0 2px 5px;
+	font-size:18px;
+	text-align:left;
+	vertical-align:middle;
+}
+
+/*=======================*/
+/*解析画面  表           */
+/*=======================*/
+table.list_style1 {
+	width:100%;
+	border:#999999 solid;
+	border-width:0 0 0 0;
+}
+
+table.list_style1 th {
+	font-weight:normal;
+	border:#999999 solid;
+	padding:2px 0 2px 3px;
+	text-align:left;
+	background-repeat:repeat-x;
+	border-width:0 0 0 0;
+	width:160px;
+}
+
+table.list_style1 td {
+	border:#999999 solid;
+	padding: 2px 0 2px 5px;
+	border-width:0 0 0 0;
+
+}
+
+table.list_style5 {
+	width:600px;
+	border:double 3px;
+	border-color: #777;
+}
+
+table.list_style5 td {
+	text-align:center;
+	vertical-align:middle;
+}
+
+table.list_style5 td.index {
+	width:540px;
+	vertical-align:middle;
+	text-align:left;
+	font-size:12px;
+	border-right:solid 1px;
+	border-top:dotted 1px;
+	padding-left:6px;	
+}
+
+table.list_style5 td.g_index_1 {
+	width:110px;
+	vertical-align:middle;
+	text-align:left;
+	font-size:12px;
+	border-bottom:dotted 1px;
+	border-right:solid 1px;
+	padding-left:6px;
+	padding-right:6px;
+}
+
+table.list_style5 td.g_data {
+	width:500px;
+	vertical-align:middle;
+	text-align:left;
+	font-size:12px;
+	border-bottom:dotted 1px;
+}
+
+table.list_style5 td.g_data_1 {
+	width:50px;
+	vertical-align:middle;
+	text-align:right;
+	font-size:12px;
+	border-bottom:dotted 1px;
+	border-right:solid 1px;
+	padding-right:6px;	
+}
+
+table.list_style6 {
+	width:400px;
+	height:300px;
+}
+
+table.list_style6 tr {
+	height:28px;	
+}
+
+table.list_style6 td.Index {
+	width:100px;
+	text-align:right;
+}
+
+table.list_style6 td.Host {
+	width:300px;
+}
+
+table.list_style6 td.Check {
+	width:10px;
+	font:14px;
+	font-weight:400;
+	color:red;	
+}
+
+table.list_style6 td.Text.textarea {
+	width:300px;
+	font:12px;
+}
+
+/*============================*/
+/*解析結果一覧用設定　ここまで*/
+/*============================*/
+
+
+div.Viewerr2{
+	width:400px;
+	margin:0 auto 0 auto;
+}
+
+div.Viewtxt{
+	width:600px;
+	text-align: center;
+	margin:0 auto 0 auto;
+}	
+
+/* フィールド指定(解析したいフィールド） */
+td.showFormDataIndex {
+	text-align: left;
+	width: 150px;
+}
+div.Viewbtn_disp {
+	height: 50px;
+	padding: 0 0 0 200px;
+}
+
+div.Viewtxt p {
+	margin: 20px 0 10px 0;
+}
+
+
+/* ------------------------------
+#アコーディオン表示のスクリプト
+------------------------------ */
+
+dl {
+	width: 620px;
+	border-top: #555 0px solid;
+	border-left: #555 0px solid;
+	border-right: #555 0px solid;
+	position: relative;
+}
+dl dt {
+	padding: 5px 10px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	background: #555;
+	/*グラデーション*/
+	background: -moz-linear-gradient(top, #aaa, #fff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#fff));
+    -pie-background: linear-gradient(#aaa, #fff);
+	/*角丸*/
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-pie-border-radius: 5px;
+	position: relative;
+	behavior: url(./css/PIE.htc);
+	
+}
+
+dl dt.active,
+dl dt.ov {
+	background: #888;
+	/*グラデーション*/
+	background: -moz-linear-gradient(top, #888, #ddd);
+    background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#ddd));
+    -pie-background: linear-gradient(#888, #ddd);
+	border-bottom: #555 0px solid;
+	/*border-left: #777 5px solid;*/
+	behavior: url(./css/PIE.htc);
+}
+dl dt.active {
+	color: #fff;
+}
+dl dd {
+	border-bottom: #000 0px solid;
+	padding-left: 10px;
+	position: relative;
+}
+dl dd p {
+	padding: 10px 10px;
+	background: #efefef;
+}
+
+dl dd a:link {
+	color: #000;
+}
+
+dl dd a:visited
+ {
+	color: #000;
+}
+
+dl dd a:active {
+	color: #000;
+}
+
+dl dd a:hover {
+	color: #000;
+}
+
+dd {
+	/*display:none;*/
+}
+
+div.list_footer {
+	text-align:right;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+}
+
+div.list_footer a {
+	text-decoration: none;
+}

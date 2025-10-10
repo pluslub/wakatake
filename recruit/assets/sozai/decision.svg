@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131.75 125.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7e0cd;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        font-size: 48px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #000;
+        font-family: YujiMai-Regular, 'Yuji Mai';
+        glyph-orientation-vertical: 0deg;
+        text-orientation: upright;
+        writing-mode: tb;
+      }
+
+      .cls-4 {
+        opacity: .69;
+      }
+
+      .cls-3 {
+        font-size: 39px;
+      }
+    </style>
+  </defs>
+  <g class="cls-4">
+    <path class="cls-1" d="M92.52,36.63C92.71,13.82,75.34.53,52.3.54,29.99-3.49,12.17,15.69,13.22,36.18c-.51,14.85,4.08,21.88,10.75,29.4C9.77,66.28-.89,78.21.06,95.87c-.78,15.52,12.52,28.5,29.69,28.97,17.37,2.75,31.29-13.63,30.84-27.5.25-7.71-.05-15.23-4.97-20.54,21.84-2.39,37.69-19.39,36.9-40.18Z"/>
+  </g>
+  <text class="cls-2" transform="translate(52.62 10.96)"><tspan x="0" y="0">信</tspan></text>
+  <text class="cls-3" transform="translate(32.46 75.17)"><tspan x="0" y="0">念</tspan></text>
+</svg>

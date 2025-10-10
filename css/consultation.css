@@ -1,0 +1,190 @@
+:root {
+  --mainColor: #005249;
+  --subColor: #A8BD38;
+  --accentColor: #d9dc41;
+  --textColor: #002724;
+  --bgColor: #FEFFFD;
+  --gray: #C5C5C5;
+}
+
+
+/*========== 指定特定相談支援事業所わかたけ ==========*/
+main {
+  padding-inline: 7%;
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding-inline: 4%;
+  }
+}
+
+
+/*==============================
+ファーストビュー
+===============================*/
+.first-view {
+  margin: 0 calc(50% - 50vw);  /* 画面幅いっぱいにはみ出させるためのネガティブマージン */
+  width: 100vw;                /* 幅を画面幅いっぱいに指定 */
+  margin-bottom: 15rem;
+}
+
+.first-view__img img {
+  width: 100vw;
+  object-fit: contain;
+  object-position: center;
+}
+
+.first-view__img h2 {
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  font-size: clamp(2rem, 1.538rem + 2.05vw, 4rem);
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  color: var(--bgColor);
+}
+
+.first-view__text {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto; /* または min-height を設定 */
+  background-color: var(--bgColor);
+  border-radius: 5rem 0 0 0;
+  margin-top: -7%;
+  padding: 4rem 7.5% 0;
+  z-index: 10;
+  color: var(--textColor);
+}
+
+.first-view__text h2 {
+  display: none;
+}
+
+.first-view__text h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 180%;
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+}
+
+.first-view__text p {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 1200px) {
+  .first-view {
+    margin-bottom: 10rem;
+  }
+
+  .first-view__img h2 {
+    display: none;
+  }
+
+  .first-view__text {
+    padding: 4rem 4% 0;
+    border-radius: 2rem 0 0 0;
+    margin-top: -10%;
+  }
+
+  .first-view__text h2 {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--mainColor);
+    margin-bottom: 1rem;
+  }
+
+  .first-view__text h3 {
+    font-size: 24px;
+  }
+
+  .first-view__text p {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-view__text p br {
+    display: none;
+  }
+}
+
+
+/*==============================
+work
+===============================*/
+.overflow-right__heading {
+  font-family: "LINE Seed JP";
+  font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+  font-weight: bold;
+  color: var(--mainColor);
+  line-height: 180%;
+  letter-spacing: 0.06em;
+  margin-bottom: 5rem;
+}
+
+.splide__slide  {
+  width: 100% !important;
+  max-width: 640px;
+}
+
+.slide__desc h4 {
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  font-weight: bold;
+  color: var(--subColor);
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.slide__desc p {
+  font-size: clamp(0.813rem, 0.74rem + 0.32vw, 1.125rem);
+  color: var(--textColor);
+  line-height: 180%;
+  letter-spacing: 0.08em;
+}
+
+.splide__slide img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.overflow-right__sliderWrap {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.overflow-right__sliderWrap {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%); 
+}
+
+.splide__arrow--prev,
+.splide__arrow--next {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--accentColor);
+  opacity: 0.8;
+}  
+
+@media (max-width: 560px) {
+  .splide__slide  {
+    max-width: 300px;
+  }
+
+
+  .splide__arrow--prev,
+  .splide__arrow--next {
+    display: none;
+  }  
+}
+
+

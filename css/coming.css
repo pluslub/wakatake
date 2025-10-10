@@ -1,0 +1,27 @@
+
+:root {
+  --mainColor: #005149;
+  --subColor: #A8BD38;
+  --accentColor: #D9DC41;
+  --textColor: #002724;
+  --bgColor: #FEFFFD;
+  --gray: #C5C5C5;
+}
+
+main {
+  padding-inline: 7%;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.grid h2 {
+  font-family: "LINE Seed JP";
+  font-size: clamp(2rem, 1.143rem + 3.81vw, 4rem);
+  color: var(--mainColor);
+  font-weight: bold;
+}

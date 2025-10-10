@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132.86 125.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7e0cd;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        font-size: 48px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #000;
+        font-family: YujiMai-Regular, 'Yuji Mai';
+        glyph-orientation-vertical: 0deg;
+        text-orientation: upright;
+        writing-mode: tb;
+      }
+
+      .cls-4 {
+        opacity: .69;
+      }
+
+      .cls-3 {
+        font-size: 39px;
+      }
+    </style>
+  </defs>
+  <g class="cls-4">
+    <path class="cls-1" d="M0,36.63C.2,13.82,18.56.53,39.61.54c21.78-4.03,39.7,15.15,40.75,35.64-.51,14.85-3.57,21.88-9.48,29.4,13.23.71,22.98,12.63,23.93,30.3-.78,15.52-15.35,28.5-32.58,28.97-17.02,2.75-30.97-13.63-31.43-27.5.25-7.71,3.71-15.23,5.24-20.54C17.02,74.41.79,57.42,0,36.63Z"/>
+  </g>
+  <text class="cls-2" transform="translate(40.69 14.22)"><tspan x="0" y="0">仲</tspan></text>
+  <text class="cls-3" transform="translate(63.59 75.17)"><tspan x="0" y="0">間</tspan></text>
+</svg>

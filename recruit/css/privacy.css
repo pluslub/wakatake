@@ -1,0 +1,110 @@
+/*==============================
+             変数
+==============================*/
+:root {
+  --mainColor: #69ba00;
+  --subColor: #F5F4EA;
+  --bgColor: #FFFFFF;
+  --accentColor: #f09b45;
+}
+
+
+body {
+  font-family: Noto sans Jp;
+  background-color: var(--subColor);
+}
+
+
+main {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 0px 6px 0px rgba(143, 143, 143, 0.45);
+  background-color: var(--subColor);
+  overflow: hidden;
+ }
+
+
+.container {
+  height: auto;
+  width: 100%;
+  padding: 3rem 1rem;
+}
+
+.container:last-child {
+  margin-bottom: 3rem;
+}
+
+.container h1 {
+  display: block;
+  font-size: clamp(1.5rem, -0.429rem + 8.57vw, 2.25rem);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+ 
+.container h2 {
+  font-size: clamp(1rem, 0.679rem + 1.43vw, 1.125rem);
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.container p {
+  font-size: clamp(0.813rem, 0.33rem + 2.14vw, 1rem);
+  line-height: 1.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.container ul li {
+  font-size: clamp(0.813rem, 0.33rem + 2.14vw, 1rem);
+  margin-bottom: .5rem;
+}
+
+.address > h2 {
+  font-size: clamp(1.125rem, 0.482rem + 2.86vw, 1.375rem);
+  font-weight: bold;
+}
+
+.address > p:nth-of-type(1) {
+  margin-bottom: .1rem;
+}
+
+.inquiry {
+  display: block;
+  text-align: center;
+}
+
+.inquiry > a {
+  display: block;
+  color: #333333;
+  font-size: clamp(1.125rem, 0.482rem + 2.86vw, 1.375rem);
+  font-weight: bold;
+  margin: 2rem auto 3rem;
+}
+
+.form-btn {
+  display: block;
+  width: 55%;
+  height: auto;
+  background-color: var(--mainColor);
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+.form-btn > a {
+  color: var(--subColor);
+  text-decoration: none;
+  font-size: clamp(0.875rem, 0.554rem + 1.43vw, 1rem);
+  font-weight: 400;
+}
+
+@media (max-width: 500px) {
+  .form-btn {
+    width: 75%;
+  }
+}

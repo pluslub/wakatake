@@ -1,0 +1,466 @@
+
+
+/*========== contact ==========*/
+main {
+  padding-inline: 7%;
+}
+
+.contact {
+  width: 100%;
+  max-height: 40rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact__tittle {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  margin: 13.5rem 5.5% 15rem;
+}
+
+.contact__tittle h2 {
+  font-family: 'LINE Seed JP';
+  font-size: clamp(2rem, 1.423rem + 2.56vw, 4.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.contact__tittle h2 p {
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  color: #c5c5c5;
+}
+
+.contact__text {
+  font-size: clamp(0.875rem, 0.731rem + 0.64vw, 1.5rem);
+  color: var(--textColor);
+  letter-spacing: 0.04em;
+  line-height: 180%;
+  letter-spacing: 0.06em;
+}
+
+.contact__text p {
+  font-size: clamp(0.75rem, 0.692rem + 0.26vw, 1rem);
+  line-height: 160%;
+  letter-spacing: 0.06em;
+  margin-top: 2rem;
+}
+
+.contacts__container {
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding-inline: 4%;
+  }
+
+  .contact__tittle {
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    margin: 13.5rem 0;
+  }
+
+  .contact__text p {
+    margin-top: 1rem;
+  }
+}
+
+
+/*==============================
+              Q&A
+===============================*/
+.qa {
+  width: 100%;
+  background-color: #F6F7F2;
+  padding: 6.5rem 13.5%;
+  border-radius: 1rem;
+}
+
+.qa h3 {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 1.154rem + 1.54vw, 3rem);
+  color: var(--mainColor);
+  margin-bottom: 3.5rem;
+}
+
+.details {
+  margin-bottom: 2rem;
+}
+
+.details:last-of-type {
+  margin-bottom: 6.5rem;
+}
+
+.details-summary {
+	position: relative;
+	display: block;
+	padding: 20px;
+	color: var(--textColor);
+	font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+	font-weight: bold;
+	text-align: center;
+	background-color: #fff;  
+  border-radius: .5rem;
+  transition: .1s;
+}
+
+.is-active {
+  border-bottom: 1px var(--textColor) dashed;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.details-summary:hover {
+  cursor: pointer;
+}
+
+.details-summary .btn {
+  position: absolute;
+  top: 37%;
+  right: 10%;
+  width: 18px;
+  height: 18px;
+  transform-origin: center center;
+  transition-duration: 0.2s;
+}
+
+.details-summary .btn:before,
+.details-summary .btn:after {
+  content: "";
+  background-color: var(--subColor);
+  border-radius: 10px;
+  width: 18px;
+  height: 4px;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  transform-origin: center center;
+}
+
+.details-summary .btn:before {
+  width: 4px;
+  height: 18px;
+  top: 0;
+  left: 7px;
+}
+
+.details-summary.is-active .btn {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.details-summary.is-active .btn:before {
+  content: none;
+}	
+
+.details-summary::-webkit-details-marker {
+	display: none;
+}
+
+.details-content {
+  background: #fff;
+  border-radius: 0 0 .5rem .5rem;
+	padding: 20px;
+}
+
+.details-content p {
+  margin: 0 0 20px;
+  color: var(--textColor);
+  font-size: clamp(0.813rem, 0.74rem + 0.32vw, 1.125);
+  line-height: 160%;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+
+.details-content p:last-of-type {
+  margin: 0 0 0;
+}
+
+@media (max-width: 1200px) {
+  .qa {
+    padding: 6.5rem 7%;
+  }
+}
+
+@media (max-width: 768px) {
+  .qa {
+    padding: 3rem 4%;
+    border-radius: 6px;
+  }
+
+  .qa h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .details-summary {
+    text-align: left;
+    padding:  20px 15px 20px;
+    border-radius: 6px;
+  }
+
+  .details-summary .btn {
+  right: 5%;
+  }
+
+  .details-content {
+    padding: 20px 10px;
+  }
+
+  .is-active { 
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+
+
+table {
+  margin-left: 2%;
+  margin-bottom: 20px;
+  border: solid 2px #333333;
+}
+
+@media screen and (max-width: 560px) {
+  table {
+    margin: 0 auto 20px;
+  }
+}
+
+  table tr {
+  height: 40px;
+  border: solid 1px #333333;
+}
+
+  table th {
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: solid 1px #333333;
+  color: #333333;
+}
+
+table td {
+  padding: 10px 10px 10px 2%;
+  border: solid 1px #333333;
+  vertical-align: middle;
+  line-height: 1.6rem;
+  color: #333333;
+}
+
+/*==============================
+              form
+===============================*/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 5.5%;
+  background: #fff;
+  border-radius: 1rem;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form__container-agree,
+.form__container-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__container-agree {
+  gap: 4px;
+  margin-bottom: 1rem;
+}
+
+.form__container-agree label a {
+  color: var(--textColor);
+  font-size: clamp(0.75rem, 0.663rem + 0.38vw, 1.125rem);
+}
+.form__container p label {
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  color: var(--mainColor);
+  font-weight: bold;
+  margin-bottom: .5rem !important;
+}
+label {
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  color: var(--mainColor);
+  font-weight: bold;
+  margin-bottom: .5rem !important;
+}
+/*
+input {
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid var(--mainColor);
+  padding-left: .5rem;
+  letter-spacing: 0.08em;
+}*/
+
+/*textarea {
+  font-size: clamp(0.813rem, 0.769rem + 0.19vw, 1rem);
+  padding: 1rem;
+  border: 1px solid var(--mainColor);
+  border-radius: 6px;
+  line-height: 160%;
+  letter-spacing: 0.08em;
+}*/
+
+
+@media (max-width: 1200px) {
+  .form {
+    gap: 1rem;
+    padding: 2rem 2%;
+    border-radius: 6px;
+  }
+
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"] {
+    height: 32px;
+    border-radius: 4px;
+  }
+  .wpcf7-form input[type="checkbox"] {
+    border-radius: 4px;
+  }
+
+  textarea {
+    max-height: 320px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  textarea {
+    max-height: 320px;
+    border-radius: 4px;
+    padding: .5rem;
+  }
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"] {
+    height: 32px;
+    border-radius: 4px;
+  }
+  .wpcf7-form input[type="checkbox"] {
+    border-radius: 4px;
+  }
+}
+
+
+/* Contact Form7 20250509_yamamoto */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid var(--mainColor);
+  padding-left: .5rem;
+  letter-spacing: 0.08em;
+  width: 100%!important
+}
+.wpcf7 textarea {
+  height: 320px;
+  border-radius: 6px;
+  border: 1px solid var(--mainColor);
+  padding-left: .5rem;
+  letter-spacing: 0.08em;
+  width: 100%!important
+}
+.wpcf7-form input[type="checkbox"] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    border: initial;
+}
+.wpcf7-form input[type="submit"] {
+    height:48px !important;
+    padding: 0 2.5rem;
+    background: var(--accentColor);
+    border: none;
+    border-radius: 2rem;
+    font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
+    color: #fff;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+
+}
+
+/* Contact Form 7のエラー表示を修正するCSS */
+
+/* 画面上部のエラーメッセージ（screen-reader-response）を非表示にする */
+.wpcf7 .screen-reader-response {
+  display: none;
+}
+
+/* インライン表示されるエラーメッセージを赤色にする */
+.wpcf7 .wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* エラー時の入力欄スタイル */
+.wpcf7 .wpcf7-not-valid {
+  border: 1px solid #dc3232;
+}
+
+/* 初期状態ではレスポンスメッセージを非表示に */
+.wpcf7 .wpcf7-response-output {
+  display: none;
+}
+
+/* エラー時のみ表示（validation-errors クラスがついたとき） */
+.wpcf7 .wpcf7-validation-errors,
+.wpcf7 .wpcf7-aborted,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output {
+  display: block;
+  color: #dc3232;
+  border: 1px solid #dc3232;
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* 送信成功時のメッセージスタイル（こちらは表示） */
+.wpcf7 form.sent .wpcf7-response-output {
+  display: block;
+  color: #46b450;
+  border: 1px solid #46b450;
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+/* プライバシーポリシー同意チェックボックスのエラー表示を修正するCSS */
+
+/* acceptance（同意）フィールドのエラー表示を確実に表示 */
+.wpcf7 .wpcf7-acceptance.wpcf7-not-valid .wpcf7-list-item {
+  border-bottom: 2px solid #dc3232;
+}
+
+/* 同意チェックボックスのエラーメッセージを表示 */
+.wpcf7 .wpcf7-acceptance-missing {
+  color: #dc3232;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+/* エラー時にフォーム全体のメッセージを表示（acceptance-missingを含む） */
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  display: block;
+  color: #dc3232;
+  border: 1px solid #dc3232;
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,385 @@
+
+
+/*========== about us ==========*/
+main {
+  padding-inline: 7%;
+}
+
+.aboutUs {
+  width: 100%;
+  max-height: 40rem;
+  display: flex;
+  align-items: center;
+}
+
+.aboutUs__tittle {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  margin: 13.5rem 5.5% 15rem;
+}
+
+.aboutUs__tittle h2 {
+  font-family: 'LINE Seed JP';
+  font-size: clamp(2rem, 1.423rem + 2.56vw, 4.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.aboutUs__tittle h2 p {
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  color: #c5c5c5;
+}
+
+.aboutUs__container {
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 1200px) {
+  main {
+    padding-inline: 4%;
+  }
+
+  .aboutUs__tittle {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+    margin: 13.5rem 0 15rem;
+  }
+}
+
+
+/*==============================
+        aboutUs__values
+===============================*/
+.values {
+  margin-bottom: 18rem;
+}
+
+.values__container {
+  display: flex;
+  gap: calc(10% - 1rem);
+  padding: 0 5.5%;
+}
+
+.values__container:first-of-type {
+  margin-bottom: 8.875rem;
+}
+
+.values__container img {
+  width: calc(100% / 2);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+.values__container-text h3 {
+  font-family: 'LINE Seed JP';
+  font-weight: bold;
+  font-size: clamp(1.125rem, 0.808rem + 1.41vw, 2.5rem);
+  color: var(--subColor);
+  margin-bottom: 1.5rem;
+}
+
+.values__container-text h3::before {
+  content: '';
+  display: inline-block;
+  width: 3.375rem;
+  height: 3.375rem;
+  background-image: url('../assets/images/favicon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  margin-right: .5rem;
+}
+
+
+.values__container-text p {
+  color: var(--textColor);
+  font-size: clamp(0.875rem, 0.731rem + 0.64vw, 1.5rem);
+  line-height: 180%;
+  letter-spacing: 0.06em;
+}
+
+.values__container-text p:first-of-type {
+  font-weight: bold;
+  color: var(--mainColor);
+  font-size: clamp(1.5rem, 1.269rem + 1.03vw, 2.5rem);
+  line-height: 160%;
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .values__container {
+    justify-content: center;
+    gap: calc(10% - 1rem);
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+.values {
+  margin-bottom: 6rem;
+}
+
+  .values__container {
+    flex-wrap: wrap;
+    gap: calc(10% - 1rem);
+    padding: 0;
+  }
+
+  .values__container:first-of-type {
+    margin-bottom: 5rem;
+  }
+
+  .values__container:last-of-type {
+    flex-wrap: wrap-reverse;
+  }
+
+  .values__container img {
+    margin: 0 calc(50% - 50vw);  
+    width: 100%; 
+    border-radius: 0;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+  }
+
+  .values__container-text h3::before {
+    width: 1.375rem;
+    height: 1.375rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+  }
+}
+
+/*==============================
+            message
+===============================*/
+.message {
+  display: flex;
+  gap: calc(5% - 1rem);
+  padding-inline: 5.5%;
+  position: relative;
+  margin-bottom: 8.375rem;
+  position: relative;
+}
+
+.massage__visual {
+  height: max(640px,100%);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .massage__visual {
+    position: sticky;
+    top: 15vh;
+    left: 0;
+  }
+}
+
+.massage__visual img {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.message__text h4 {
+  font-size: clamp(1.125rem, 0.923rem + 0.9vw, 2rem);
+  font-weight: bold;
+  color: var(--mainColor);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.message__text h4::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 85%;
+  position: absolute;
+  background: var(--subColor);
+  transform: skewX(-45deg) translate(16px, -32px);
+}
+
+.message__text h5 {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
+  font-weight: bold;
+  color: var(--subColor);
+  margin-bottom: 1rem;
+}
+
+.line {
+  width: 75%;
+  border-bottom: 2px solid var(--subColor);
+  transform: translateY(-41%);
+}
+
+.message__text p {
+  font-size: clamp(0.813rem, 0.769rem + 0.19vw, 1rem);
+  color: var(--textColor);
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.message__text--link {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: .5rem;
+  font-size: clamp(0.813rem, 0.74rem + 0.32vw, 1.125rem);
+}
+
+.message__text--link a {
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--subColor);
+}
+
+.message__text small span {
+  font-size: clamp(0.75rem, 0.721rem + 0.13vw, 0.875rem);
+}
+
+
+@media (max-width: 1200px) {
+  .message {
+    padding-inline: 0;
+  }
+
+
+  .line {
+    width: 65%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .message {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .message__text {
+    width: 95%;
+    z-index: 20;
+    background: #fff;
+    padding: 2rem 4%;
+    margin-left: auto;
+    transform: translateY(-3%);
+    border-radius: .5rem;
+    box-shadow: 0px 0px 10px 0px rgba(190, 190, 190, 0.35);
+  }
+
+  .message__text h4::after {
+    display: none;
+  }
+}
+
+
+/*==============================
+        company profile
+===============================*/
+.company__profile {
+  margin: 0 calc(50% - 50vw) 12.5rem;  
+  width: 100vw; 
+  display: flex;
+  justify-content: space-between;
+  background-image: url(/assets/images/pattern.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color:rgba(255,255,255,0.85);
+  background-blend-mode:lighten;
+  padding: 4rem 13.5%;
+}
+
+.company__img {
+  width: calc(100% - 40%);
+}
+
+.company__img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+.company__desc {
+  width: calc(100% / 2);
+  display: flex;
+  flex-direction: column;
+  padding-block: 1rem;
+}
+
+.company__desc h3 {
+  font-family: 'LINE Seed JP';
+  font-weight: bold;
+  font-size: clamp(1.5rem, 1.269rem + 1.03vw, 2.5rem);
+  color: var(--mainColor);
+  margin-bottom: 2rem;
+}
+
+.company__desc ul {
+  width: 80%;
+}
+
+.company__desc ul li {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: clamp(1rem, 0.885rem + 0.51vw, 1.5rem);
+  font-weight: bold;
+  color: var(--mainColor);
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--textColor);
+  margin-bottom: .5rem;
+}
+
+.company__desc ul li span {
+  font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
+  color: var(--textColor);
+}
+
+.company__desc ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.company__desc ul li:last-of-type .industry-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.company__desc ul li:last-of-type .industry-list li {
+  font-size: clamp(0.875rem, 0.817rem + 0.26vw, 1.125rem);
+  font-weight: normal;
+  color: var(--textColor);
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+
+@media (max-width: 768px) {
+  .company__profile {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 4rem 4%;
+    margin: 0 calc(50% - 50vw) 5rem;
+  }
+
+  .company__img {
+    width: auto;
+  }
+
+  .company__desc {
+    width: 100%;
+  }
+
+  .company__desc ul {
+    width: 100%;
+  }
+}
