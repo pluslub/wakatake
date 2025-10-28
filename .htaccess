@@ -4,4 +4,4 @@ SetEnvIf Request_URI ".*" WpLoginNoLimit
 
 AddHandler fcgid-script .html
 
-Redirect 301 /ws/plus_lab.html https://wakatake.info/pluslab/
+Redirect 301 /ws/plus_lab.html https://pluslab.wakatake.info/

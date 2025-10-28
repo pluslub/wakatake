@@ -368,7 +368,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <ul class="footer-container__links-workstation">
               <li><a href="https://wakatake-ws.com/school.html">若竹福祉総合学院</a></li>
               <li><a href="https://wakatake-ws.com/bakery&cafe.html">Bakery&Cafe わかたけ</a></li>
-              <li><a href="https://wakatake-ws.com/plus_lab.html">Plus らぼ</a></li>
+              <li><a href="https://pluslab.wakatake.info/">Plus らぼ</a></li>
             </ul>
           </li>
           <li><a href="https://www.wakatake.info/wakatake/">若竹作業所</a></li>
