@@ -49,7 +49,8 @@ main {
 
 .first-view__text {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: auto; /* または min-height を設定 */
   background-color: var(--bgColor);
@@ -58,6 +59,10 @@ main {
   padding: 4rem 7.5% 0;
   z-index: 10;
   color: var(--textColor);
+}
+
+.first-view__facebook {
+    width: 500px;
 }
 
 .first-view__text h2 {
@@ -114,6 +119,16 @@ main {
 @media (max-width: 768px) {
   .first-view__text p br {
     display: none;
+  }
+
+  .first-view__text {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .first-view__facebook {
+      width: 370px;
+      margin-top: 2rem;
   }
 }
 
