@@ -48,20 +48,25 @@ main {
 }
 
 .first-view__text {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: auto; /* または min-height を設定 */
-  background-color: var(--bgColor);
-  border-radius: 5rem 0 0 0;
-  margin-top: -7%;
-  padding: 4rem 7.5% 0;
-  z-index: 10;
-  color: var(--textColor);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto; 
+    background-color: var(--bgColor);
+    border-radius: 5rem 0 0 0;
+    margin-top: -7%;
+    padding: 4rem 7.5% 0;
+    z-index: 10;
+    color: var(--textColor);
 }
 
 .first-view__facebook {
+    display: flex;
+    justify-content: center;
+}
+
+.first-view__facebook-iframe {
     width: 500px;
 }
 
@@ -126,7 +131,7 @@ main {
     align-items: center;
   }
   
-  .first-view__facebook {
+  .first-view__facebook-iframe {
       width: 370px;
       margin-top: 2rem;
   }
