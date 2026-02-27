@@ -903,7 +903,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="access-address">
         <span>Access</span>
         <h2>社会福祉法人若竹会<br>法人本部</h2>
-        <p>滋賀県草津市川原町297-3　2F</p>
+        <p>滋賀県草津市川原町298-1　2F</p>
         <p>質問やご不明点等がございまいしたら、こちらよりお問い合わせください。</p>
       </div>
       <div class="access-contact" id="inquiry">
