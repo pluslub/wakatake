@@ -184,7 +184,23 @@ main {
   color: var(--textColor);
 }
 
-
+/* スライドパネル内の画像全般に対する修正 */
+.slide-panel img {
+    max-width: 100% !important; /* 親要素の幅を超えないようにする */
+    height: auto !important;    /* 横幅に合わせて高さを自動調整し、伸びるのを防ぐ */
+    object-fit: contain;        /* 枠内に収まるように調整 */
+}
+ 
+/* WordPressのブロック画像（figureタグ）に対する調整 */
+.slide-panel .wp-block-image {
+    margin: 0 0 1.5em 0;
+    max-width: 100%;
+}
+ 
+.slide-panel .wp-block-image img {
+    display: block;
+    width: 100%;
+}
 /* page nation  */
 /* ----------------------------------------- */
 .pagination {
